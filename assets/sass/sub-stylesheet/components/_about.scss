@@ -94,7 +94,7 @@
                 animation: shakeY 15s linear infinite;
                 z-index: 1;
                 @include breakpoint(xxl) {
-                  max-width: 100%;
+                  max-width: 40%;
                 }
                 @include breakpoint(max-lg) {
                     display: none;

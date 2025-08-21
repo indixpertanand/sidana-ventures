@@ -1,4 +1,5 @@
 .testimonial {
+    background-size: cover;
     &__area {
         margin-top: 120px;
     }
@@ -144,8 +145,10 @@
                 }
             }
             &__author {
-                @extend %pl-15, %justify-between, %align-items-center;
-                width: calc(100% - 60px);
+                // %pl-15,
+                @extend  %justify-between, %align-items-center;
+                // width: calc(100% - 60px);
+                width: 100%;
                 text-align: left;
             }
             &__content {

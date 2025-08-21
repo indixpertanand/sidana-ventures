@@ -4,9 +4,9 @@
         &:hover {
             .project {
                 &__thumb {
-                    img {
-                        @include transform(scale(1.1));
-                    }
+                    // img {
+                    //     @include transform(scale(1.1));
+                    // }
                 }
                 &__content {
                     opacity: 1;
@@ -18,9 +18,35 @@
         }
     }
     &__thumb {
+        aspect-ratio: 4/5;
+        display: grid;
+        place-items: center;
+        @extend %bg-border;
         @extend %hidden;
-        img {
-            @extend %w-100;
+        @include breakpoint(md) {
+                aspect-ratio: 1/1;
+            }
+        .icon {
+            @extend %w-60;
+            aspect-ratio: 1/1;
+            object-fit: contain;
+            display: grid;
+            place-items: center;
+            overflow: hidden;
+           
+        }
+
+        .icon:not(.no-bg){
+            background: #fff;
+            border-radius: 50%;
+            padding: 15px;
+            max-width: 180px;
+             @include breakpoint(lg){
+                padding: 40px;
+            }
+        }
+        .no-bg img{
+            border-radius: 50%;
         }
     }
     &__content {
@@ -30,19 +56,19 @@
         @extend %p-30;
         @extend %flex;
         @include transition($transition);
-        flex-direction: column-reverse;
+        flex-direction: column;
         bottom: 0;
         left: 0;
         background-color: rgba($theme-color, $alpha: .9);
         opacity: 0;
-        span {
+        span,p {
             @extend %d-block;
             @extend %white-color;
         }
         h4 {
             a {
                 @extend %white-color;
-                @extend %text-1;
+                @extend %text-2;
             }
         }
     }
@@ -66,8 +92,18 @@
     &__two {
         .project {
             &__item {
+                width: 100%;
+                @include breakpoint(xs) {
+                    width: calc((100% - 2px) / 2);
+                    .project__content{
+                        padding: 15px
+                    }
+                }
                 @include breakpoint(sm) {
                     width: calc(100% / 2);
+                    .project__content{
+                        padding: 30px
+                    }
                 }
                 @include breakpoint(lg) {
                     width: calc(100% / 3);

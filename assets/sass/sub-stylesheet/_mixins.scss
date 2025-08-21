@@ -30,6 +30,11 @@
 }
 
 @mixin breakpoint($point) {
+    @if $point==xs {
+        @media (min-width: 420px) {
+            @content ;
+        }
+    }
     @if $point==sm {
         @media (min-width: 576px) {
             @content ;

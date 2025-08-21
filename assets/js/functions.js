@@ -324,7 +324,7 @@
 
         // sponsor slider start here
         var swiper = new Swiper('.service__slider', {
-            slidesPerView: 3.4,
+            slidesPerView: 3,
             spaceBetween: 20,
             speed: 1200,
             autoplay: {
@@ -344,10 +344,7 @@
 				},
 				1200: {
 					slidesPerView: 2.5,
-				},
-				1400: {
-					slidesPerView: 3,
-				},
+				}
 			},
             pagination: {
                 el: ".service__pagination",

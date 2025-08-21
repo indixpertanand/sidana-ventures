@@ -4,6 +4,7 @@
     //     background-color: $title-color;
     // }
     &.header-fixed {
+        position: fixed;
         &.header {
             &__one {
                 background-color: $title-color;

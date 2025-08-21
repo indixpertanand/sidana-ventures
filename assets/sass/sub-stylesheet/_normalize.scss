@@ -14,7 +14,11 @@ body {
 :root {
 	scroll-behavior: auto !important;
 }
-
+@media (max-width: 768px){
+	html,body{
+		font-size: 13px;
+	}
+}
 /*--------------------------------------------------------------
 # Typography
 --------------------------------------------------------------*/

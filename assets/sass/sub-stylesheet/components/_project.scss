@@ -27,22 +27,24 @@
                 aspect-ratio: 1/1;
             }
         .icon {
-            @extend %w-60;
+            @extend %w-70;
             aspect-ratio: 1/1;
             object-fit: contain;
             display: grid;
             place-items: center;
             overflow: hidden;
-           
+           img{
+            width: 100%;
+           }
         }
 
         .icon:not(.no-bg){
             background: #fff;
             border-radius: 50%;
             padding: 15px;
-            max-width: 180px;
+            // max-width: 180px;
              @include breakpoint(lg){
-                padding: 40px;
+                padding: 30px;
             }
         }
         .no-bg img{
@@ -65,7 +67,7 @@
             @extend %d-block;
             @extend %white-color;
         }
-        h4 {
+        h3 {
             a {
                 @extend %white-color;
                 @extend %text-2;
@@ -74,9 +76,9 @@
     }
     &__icon {
         @extend %abs;
-        width: 56px;
-        height: 56px;
-        line-height: 56px;
+        width: 36px;
+        height: 36px;
+        line-height: 36px;
         right: 30px;
         top: 30px;
         opacity: 0;
@@ -87,6 +89,12 @@
         @include transition($transition);
         &:hover {
             @extend %theme-color;
+        }
+
+        @include breakpoint(lg){
+           width: 56px;
+        height: 56px;
+        line-height: 56px; 
         }
     }
     &__two {
@@ -102,7 +110,7 @@
                 @include breakpoint(sm) {
                     width: calc(100% / 2);
                     .project__content{
-                        padding: 30px
+                        padding: 40px
                     }
                 }
                 @include breakpoint(lg) {

@@ -2,8 +2,9 @@
     padding-block: 138px;
     margin-top: 0px;
     background-image: url(../../assets/images/bg/pageheader.jpg);
+    background-position: center;
     @include breakpoint(xl) {
-        margin-top: 131px;
+        margin-top: 110px;
     }
     @include breakpoint(max-sm) {
         // margin-top: 66px;

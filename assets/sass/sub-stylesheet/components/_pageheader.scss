@@ -3,6 +3,8 @@
     margin-top: 0px;
     background-image: url(../../assets/images/bg/pageheader.jpg);
     background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     @include breakpoint(xl) {
         margin-top: 110px;
     }

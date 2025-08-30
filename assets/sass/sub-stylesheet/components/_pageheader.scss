@@ -13,8 +13,11 @@
     }
     &__content {
         @extend %text-center;
-        h2 {
+        h2, h1 {
             @extend %white-color;
+        }
+        h6,.h6{
+            color: $theme-color;
         }
         .breadcrumb {
             @extend %justify-center;

@@ -1,0 +1,88 @@
+.event-details{
+    .video__btn{
+        width: 4.5rem;
+        aspect-ratio: 1/1;
+        background: $theme-color;
+        &:hover{
+            background-color: $primary-color;
+        }
+    }
+    figure{
+        padding: .5rem;
+        background: #fff;
+        border-radius: .5em;
+        overflow: hidden;
+        &::before{
+        content: '';
+        position:absolute;
+        inset: .5rem;
+        background: rgba($primary-color, .4);
+    }
+    }
+    figure>img{
+        width: 100%;
+        object-fit: cover;
+        min-height: 400px;
+        object-position: top;
+        max-height: 450px;
+    }
+    .vh-50{
+        height: 50vh;
+    }
+
+    .event-highlights{
+        li{
+            .icon{
+                width: 5rem;
+                aspect-ratio: 1;
+                background-color: #fff;
+                color: $theme-color;
+                @include breakpoint(max-xl){                  
+                    width: 4rem;
+                    padding-inline: 1rem;
+                }
+                svg{
+                    aspect-ratio: 1/1;
+                    width: 100%;
+                }
+            }
+            gap: 1.5rem;
+        }
+        span{
+            font-size: 20px;
+            font-family: $font;
+            font-weight: 800;
+            line-height: 1.2;
+            color: $primary-color;
+            @include breakpoint(max-xl){                  
+             font-size: 16px;
+            }
+            @include breakpoint(max-lg){                  
+             font-size: 16px;
+             text-align: center;
+            }
+        }
+    }
+}
+
+.event-gallery li a{
+    position: relative;
+    display: block;
+    &::after{
+        content:'';
+        position: absolute;
+        inset: 0;
+        background-color: rgba($primary-color, .4);
+        background-image: url('/assets/images/events/icons/Search_Icon.webp'); 
+        background-repeat: no-repeat;
+        background-position: center;    
+        opacity: 0;
+        transition: .4s all;  
+    }
+    &:hover::after{
+        opacity: 1;
+    }
+    &:focus::after{
+        opacity: 1;
+    }
+}
